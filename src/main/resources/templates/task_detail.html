@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .task-detail {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .task-detail span {
+            font-weight: bold;
+        }
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Task Details</h1>
+    <div class="task-detail">
+        <span>ID:</span> <span th:text="${task.id}"></span>
+    </div>
+    <div class="task-detail">
+        <span>Title:</span> <span th:text="${task.title}"></span>
+    </div>
+    <div class="task-detail">
+        <span>Description:</span> <span th:text="${task.description}"></span>
+    </div>
+    <a href="/tasks" class="back-button">Back to Tasks List</a>
+</div>
+</body>
+</html>
